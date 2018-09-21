@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/corners_bg"
+        >
+        <!--ITEM-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            >
+            <ImageView
+                android:id="@+id/me_task_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/me_lijtuiguang"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                >
+                <TextView
+                    android:id="@+id/me_task_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="余额提现"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/me_item_color"
+                    />
+                <TextView
+                    android:id="@+id/me_task_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="推广任务等级达到LV5可获取现金红包"
+                    android:textColor="@color/me_item_desc_color"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/me_right"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/me_bg_color"
+        />
+
+</LinearLayout>

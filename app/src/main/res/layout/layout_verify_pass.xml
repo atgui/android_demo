@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal|center_vertical"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        app:cardBackgroundColor="@color/Grey_200"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="@dimen/_5"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="@dimen/_5"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_10"
+            android:paddingRight="@dimen/_10"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请输入登录密码"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/_10"
+                android:paddingBottom="@dimen/_10"
+                android:textColor="@color/item_txt_color"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_b2b2b2"
+                />
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_1A"
+                android:paddingTop="@dimen/_10"
+                android:paddingBottom="@dimen/_10"
+                android:gravity="center_horizontal"
+                />
+            <EditText
+                android:id="@+id/edit_pass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40"
+                android:hint="登录密码"
+                android:textColorHint="@color/grey_b2b2b2"
+                android:text=""
+                android:background="@drawable/edit_white_bg"
+                android:paddingLeft="@dimen/_5dp"
+                android:textSize="@dimen/_14sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15"
+                >
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="140dp"
+                    android:layout_height="@dimen/_40"
+                    android:text="取消"
+                    android:background="@drawable/edit_white_bg"
+                    />
+                <ImageView
+                    android:layout_width="@dimen/_20"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="140dp"
+                    android:layout_height="@dimen/_40"
+                    android:text="确定"
+                    android:background="@drawable/button_normal_grey_raduis_5"
+                    android:textColor="@color/color_white"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

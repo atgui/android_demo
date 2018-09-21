@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_black"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.xcore.ext.ImageViewExt
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/network_load"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="标题"
+                android:paddingLeft="@dimen/_10"
+                android:paddingRight="@dimen/_10"
+                android:paddingBottom="@dimen/_5"
+                android:textColor="@color/color_white"
+                android:gravity="center_vertical"
+                android:background="@drawable/up_down_grent_bg"
+                android:textSize="@dimen/_16sp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_playCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0次播放"
+            android:textColor="@color/color_9c9c9c"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="@dimen/_10"
+            android:paddingRight="@dimen/_5"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="13dp"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="50分钟"
+            android:textColor="@color/color_9c9c9c"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="@dimen/_5"
+            android:paddingRight="@dimen/_5"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="13dp"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2018-8-8"
+            android:textColor="@color/color_9c9c9c"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/_5"
+            android:paddingRight="@dimen/_10"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="13dp"
+            />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:gravity="center_vertical"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_date_time"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2018-9-19"-->
+            <!--android:textColor="@color/color_white"-->
+            <!--android:paddingRight="@dimen/_5"-->
+            <!--android:maxLines="1"-->
+            <!--android:ellipsize="end"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/image_collect"-->
+            <!--android:layout_width="@dimen/_15"-->
+            <!--android:layout_height="@dimen/_15"-->
+            <!--android:src="@drawable/collet_item"-->
+            <!--android:layout_marginRight="@dimen/_20"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image_down"-->
+            <!--android:layout_width="@dimen/_25"-->
+            <!--android:layout_height="@dimen/_25"-->
+            <!--android:src="@drawable/cache_down"-->
+            <!--android:layout_marginRight="@dimen/_10"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image_share"-->
+            <!--android:layout_width="@dimen/_25"-->
+            <!--android:layout_height="@dimen/_25"-->
+            <!--android:src="@drawable/share"-->
+            <!--android:layout_marginRight="@dimen/_10"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

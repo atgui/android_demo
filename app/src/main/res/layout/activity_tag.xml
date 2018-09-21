@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_black"
+    >
+
+    <include android:id="@+id/toolbar_layout" layout="@layout/layout_toolbar"></include>
+
+    <TextView
+        android:layout_below="@id/toolbar_layout"
+        android:id="@+id/infoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30"
+        android:text=""
+        android:textColor="@color/title_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/_5"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+    <com.nex3z.flowlayout.FlowLayout
+        android:layout_below="@id/infoTxt"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:flChildSpacing="15dp"
+        app:flChildSpacingForLastRow="align"
+        app:flFlow="true"
+        android:padding="@dimen/_10"
+        app:flRowSpacing="6dp">
+
+    </com.nex3z.flowlayout.FlowLayout>
+
+    <LinearLayout
+        android:layout_below="@id/flowLayout"
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/empty"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10"
+            android:text="暂时没有内容哦~~"
+            android:textColor="@color/color_white"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlayout"
+        android:layout_below="@id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/content_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

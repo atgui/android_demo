@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- rounded corner 缓存界面用-->
+    <corners android:radius="12dp" />
+
+    <solid android:color="#282828" />
+    <stroke
+        android:width="0dp"
+        android:color="#00a818" />
+</shape>

@@ -1,0 +1,3 @@
+# Referenced at F:\githubPro\p2p\app\build\intermediates\manifests\full\release\AndroidManifest.xml:34
+-keep class com.xcore.MainApplication { <init>(...); }
+

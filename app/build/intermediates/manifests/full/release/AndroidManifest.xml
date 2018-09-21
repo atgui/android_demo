@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xcore"
+    android:versionCode="17"
+    android:versionName="1.1.7" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- <uses-permission android:name="android.permission.READ_LOGS" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/> -->
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+
+
+    <!-- android:required=true 必须有相机功能程序才可以运行 largeHeap=true,开启大内存 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="com.xcore.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- FileProvider共享文件、缓存 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.xcore.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.xcore.RunActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xcore.P2PTransActivity" />
+        <activity android:name="com.xcore.PermissionsActivity" />
+        <activity android:name="com.xcore.SplashActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.VideoActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 服务 -->
+        <!-- <service android:name="com.services.p2p.P2PEngineServer" /> -->
+        <activity android:name="com.xcore.ui.activity.ActressActivity" />
+        <activity android:name="com.xcore.ui.activity.TagActivity" />
+        <activity android:name="com.xcore.ui.activity.LoginActivity" />
+        <activity android:name="com.xcore.ui.activity.RegisterActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.FullActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.xcore.ui.activity.UpgradeUserInfoActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.xcore.ui.activity.SpreadShareActivity" />
+        <activity android:name="com.xcore.ui.activity.SettingActivity" />
+        <activity android:name="com.xcore.ui.activity.NoticeDetailActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.VerifyPassActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.xcore.ui.activity.FeedbackRecodeActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.SearchActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.xcore.ui.activity.FeedbackActivity" />
+        <activity android:name="com.xcore.ui.activity.ThemeActivity" />
+        <activity android:name="com.xcore.ui.activity.BoxActivity" />
+        <activity android:name="com.xcore.ui.activity.LastUpdatedActivity" />
+        <activity android:name="com.xcore.ui.activity.MyShareActivity" />
+        <activity android:name="com.xcore.ui.activity.ProtocolActivity" />
+        <activity android:name="com.xcore.ui.activity.TypeActivity" />
+        <activity android:name="com.xcore.ui.activity.FindActivity" />
+        <activity android:name="com.xcore.ui.activity.XMainActivity" />
+        <activity android:name="com.xcore.ui.activity.TagSelectActivity" />
+        <activity android:name="com.xcore.ui.activity.UpgradeActivity" />
+        <activity android:name="com.xcore.ui.activity.CacheActivity" />
+        <activity android:name="com.xcore.ui.activity.HRecodeActivity" />
+        <activity android:name="com.xcore.ui.activity.CollectActivity" />
+        <activity android:name="com.xcore.ui.activity.PlayActivity" />
+        <activity android:name="com.xcore.ui.activity.LockLoginActivity" />
+        <activity android:name="com.xcore.ui.activity.LockSettingActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.AppUpdateActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.xcore.ui.activity.ThemeListActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.TipsPopupActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.xcore.ui.activity.NoticeTipsPopupActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.xcore.ui.activity.VideoSubmitErrorActivity"
+            android:theme="@style/MyDialogStyle" />
+
+        <meta-data
+            android:name="com.xcore.utils.MyGlideModule"
+            android:value="GlideModule" />
+
+        <activity android:name="com.xcore.ui.activity.UpdateUserHeadActivity" />
+        <activity android:name="com.xcore.ui.activity.GuideActivity" />
+        <activity
+            android:name="com.xcore.ui.activity.UpdatePasswordActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.xcore.ui.activity.PVideoViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name="com.xcore.ui.activity.MakeLTDActivity" />
+        <activity android:name="com.xcore.ui.activity.NvStarListActivity" />
+
+        <provider
+            android:name="com.maning.updatelibrary.MNUpdateApkFileProvider"
+            android:authorities="com.xcore.updateFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mn_update_file_provider" />
+        </provider>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.0" />
+
+        <service
+            android:name="com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner"
+            android:exported="false"
+            android:process=":patch" />
+        <service
+            android:name="com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner$InnerService"
+            android:exported="false"
+            android:process=":patch" />
+        <service
+            android:name="com.tencent.tinker.lib.service.TinkerPatchService$JobServiceRunner"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":patch" />
+        <service
+            android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService"
+            android:exported="false" />
+
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08" />
+        <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="tinker_version"
+            android:value="1.9.6" />
+    </application>
+
+</manifest>

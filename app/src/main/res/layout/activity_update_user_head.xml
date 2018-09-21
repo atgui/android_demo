@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_black"
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <include layout="@layout/layout_toolbar"/>
+            <com.xcore.ext.ImageViewExt
+                android:id="@+id/headImg"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:src="@drawable/network_load"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20"
+                />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/_30"
+                android:paddingLeft="@dimen/_30"
+                android:layout_marginTop="@dimen/_20"
+                android:paddingTop="@dimen/_10"
+                >
+                <Button
+                    android:id="@+id/btn_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="从相册选一张"
+                    android:background="@drawable/button_normal_white_raduis_5"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30"/>
+                <Button
+                    android:id="@+id/btn_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="拍一张照片"
+                    android:background="@drawable/button_normal_grey_raduis_5"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--&lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;-->
+    <!--</style>-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="Theme.ToolBar.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="RecyclerTabLayoutTheme">
+        <item name="android:textColorSecondary">@color/Grey_300</item>
+    </style>
+
+    <style name="RecyclerTabLayoutTheme.Basic"></style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/color_black</item>
+        <item name="colorControlActivated">@color/color_black</item>
+    </style>
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item> <!-- 设置dialog的背景，此处为系统给定的透明值-->
+        <item name="android:windowFrame">@null</item>                <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowNoTitle">true</item>　　　　　　　　 <!-- 是否显示标题 -->
+        <item name="android:windowIsFloating">true</item>            <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>         <!-- 是否半透明 -->
+        <item name="android:windowContentOverlay">@null</item>       <!-- 是否有覆盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>   <!-- 设置Activity出现方式 -->
+        <item name="android:backgroundDimEnabled">true</item>        <!-- 背景是否模糊显示 -->
+    </style>
+
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="storeImageChooseStyle" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <style name="tallerBarStyle" parent="@android:style/Widget.SeekBar" >
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_scl</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">10dip</item>
+    </style>
+
+</resources>

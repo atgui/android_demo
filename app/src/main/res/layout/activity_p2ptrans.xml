@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.xcore.P2PTransActivity"
+        android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动P2P影音引擎下载"
+        android:id="@+id/buttonCreateServer"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Torrent文件地址"
+        android:id="@+id/textView"
+        android:padding="5dp"
+        android:layout_margin="5dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupType">
+
+        <RadioButton
+            android:text="种子网址"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioUrl"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="种子本地路径"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioPath"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+        <RadioButton
+            android:text="自定义地址"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioCustom"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:padding="5dp" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTorrentUrl"
+        android:text="http://demo.flvurl.cn/dianyunMovieBT/4667496-1hd.mp4.torrent"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:text="下载种子"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPlayVideo" />
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="生成播放地址并复制"-->
+        <!--android:id="@+id/buttonGetStreamUrl"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewStreamUrl"
+        android:layout_margin="5dp" />
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="打开帮助"-->
+        <!--android:id="@+id/buttonHelp"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_progress_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="fdfs"
+            android:textSize="10sp"/>
+    </ScrollView>
+
+</LinearLayout>

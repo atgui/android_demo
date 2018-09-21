@@ -1,0 +1,4 @@
+#Fri Sep 21 03:12:47 CST 2018
+base.0=F\:\\githubPro\\p2p\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

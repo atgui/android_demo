@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<style name="storeImageChooseStyle" parent="@android:style/Animation.Dialog">-->
+        <!--<item name="@android:windowEnterAnimation">@anim/push_bottom_in</item>-->
+        <!--&lt;!&ndash; 进入时的动画 &ndash;&gt;-->
+        <!--<item name="@android:windowExitAnimation">@anim/push_bottom_out</item>-->
+        <!--&lt;!&ndash; 退出时的动画 &ndash;&gt;-->
+    <!--</style>-->
+</resources>

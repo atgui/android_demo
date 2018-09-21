@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10">
+
+    </android.support.v7.widget.Toolbar>
+    <!--视频-->
+    <LinearLayout
+        android:id="@+id/movieLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/converLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/conver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/item_txt_color"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:id="@+id/pauseBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pause"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/_30"
+                android:layout_height="@dimen/_30"
+                android:src="@drawable/back_left"
+                android:layout_marginLeft="@dimen/_10"
+                android:layout_marginTop="@dimen/_10"
+                />
+        </RelativeLayout>
+        <android.media.ViviTV.player.widget.DolitVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/verticalScrollView"
+        android:layout_below="@id/movieLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <!--详情-->
+            <LinearLayout
+                android:layout_below="@id/movieLayout"
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black_1A"
+                    android:paddingTop="@dimen/_20"
+                    android:paddingRight="@dimen/_10"
+                    android:paddingLeft="@dimen/_10"
+                    >
+                    <!--标题-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/txt_title"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/color_white"
+                            android:paddingRight="@dimen/_10"
+                            />
+                        <TextView
+                            android:id="@+id/txt_xiangqing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="详情 ↓"
+                            android:textColor="@color/color_white"
+                            />
+                    </LinearLayout>
+                    <!--播放次数、日期、时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_15"
+                        >
+                        <TextView
+                            android:id="@+id/txt_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0次播放"
+                            android:layout_marginRight="@dimen/_10"
+                            android:textColor="@color/color_white"
+                            />
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginRight="@dimen/_10"
+                            android:textColor="@color/color_white"
+                            />
+                        <TextView
+                            android:id="@+id/txt_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/color_white"
+                            />
+                    </LinearLayout>
+                    <!--下载、踩、收藏、分享-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_10"
+                        android:paddingRight="@dimen/_10"
+                        android:layout_marginTop="@dimen/_20"
+                        android:paddingBottom="@dimen/_10"
+                        >
+                        <Button
+                            android:id="@+id/btn_like"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/color_white"
+                            android:drawableTop="@drawable/like"
+                            android:background="@null"
+                            />
+                        <Button
+                            android:id="@+id/btn_noLike"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/color_white"
+                            android:drawableTop="@drawable/no_like"
+                            android:background="@null"
+                            />
+                        <Button
+                            android:id="@+id/btn_share"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分享"
+                            android:textColor="@color/color_white"
+                            android:drawableTop="@drawable/share"
+                            android:background="@null"
+                            />
+                        <Button
+                            android:id="@+id/btn_down"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下载"
+                            android:textColor="@color/color_white"
+                            android:drawableTop="@drawable/cache_down"
+                            android:background="@null"
+                            />
+                        <Button
+                            android:id="@+id/btn_collect"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收藏"
+                            android:textColor="@color/color_white"
+                            android:drawableTop="@drawable/collet_item"
+                            android:background="@null"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--详情-->
+                <!--隐藏-->
+                <LinearLayout
+                    android:id="@+id/detailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <!--女优-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/black_1A"
+                        android:layout_marginTop="@dimen/_5"
+                        android:paddingLeft="@dimen/_10"
+                        android:paddingRight="@dimen/_10"
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/_5"
+                        android:paddingBottom="@dimen/_5"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="女优："
+                            android:textColor="@color/title_color"
+                            />
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                            </android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--标签-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/black_1A"
+                        android:layout_marginTop="@dimen/_5"
+                        android:paddingLeft="@dimen/_10"
+                        android:paddingRight="@dimen/_10"
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/_10"
+                        android:paddingBottom="@dimen/_10"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="标签："
+                            android:textColor="@color/title_color"
+                            />
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.nex3z.flowlayout.FlowLayout
+                                android:id="@+id/bqFlowLayout"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                app:flChildSpacing="15dp"
+                                app:flChildSpacingForLastRow="align"
+                                app:flFlow="true"
+                                app:flRowSpacing="6dp">
+
+
+                            </com.nex3z.flowlayout.FlowLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--简介-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:background="@color/black_1A"
+                        android:layout_marginTop="@dimen/_5"
+                        android:paddingLeft="@dimen/_10"
+                        android:paddingRight="@dimen/_10"
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/_5"
+                        android:paddingBottom="@dimen/_5"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="简介："
+                            android:textColor="@color/title_color"
+                            />
+                        <TextView
+                            android:id="@+id/txt_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--相关-->
+            <LinearLayout
+                android:layout_below="@id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_1A"
+                android:padding="@dimen/_10"
+                android:layout_marginTop="@dimen/_5"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="相关影片："
+                    android:textColor="@color/title_color"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5"
+                        android:divider="@color/color_black"
+                        android:background="@color/black_1A"
+                        android:dividerHeight="5dp"
+                        >
+
+                    </ListView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--<com.lzy.widget.vertical.VerticalScrollView-->
+        <!--android:id="@+id/verticalScrollView"-->
+        <!--android:layout_below="@id/movieLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+
+    <!--</com.lzy.widget.vertical.VerticalScrollView>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.tinker:tinker-android-loader-1.9.6">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tinker-android-loader-1.9.6.aar/2af7f5248bc8a2df7621d4af93717c1f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tinker-android-loader-1.9.6.aar/2af7f5248bc8a2df7621d4af93717c1f/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.tinker/tinker-android-loader/1.9.6/bab5801fa57d266b28ff10ad0401bff6eb312c13/tinker-android-loader-1.9.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/_20"
+    android:paddingRight="@dimen/_20">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="#FEFEFE"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="请输入新昵称"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/_20"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10"
+                android:gravity="center_vertical"
+                >
+
+                <EditText
+                    android:id="@+id/edit_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40"
+                    android:background="@drawable/edit_bg"
+                    android:textColorHint="@color/color_9c9c9c"
+                    android:textColor="@color/title_color"
+                    android:hint="请输入新昵称"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/_10"
+                android:paddingRight="@dimen/_10"
+                >
+                <Button
+                    android:id="@+id/btn_sure"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:text="保存"
+                    android:background="@color/title_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sp"
+                    />
+                <ImageView
+                    android:layout_width="@dimen/_10"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:text="取消"
+                    android:background="@color/color_9c9c9c"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

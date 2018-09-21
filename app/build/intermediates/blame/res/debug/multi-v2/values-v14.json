@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\githubPro\\p2p\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "F:\\githubPro\\p2p\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "225",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "373"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "201"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hsg\\.gradle\\caches\\transforms-1\\files-1.1\\bottomdialog-1.1.9.aar\\880d2f5b7fed1156f9e19ba125a76436\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "16",
+                        "endOffsets": "571"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "206",
+                        "endLines": "11",
+                        "endColumns": "16",
+                        "endOffsets": "722"
+                    }
+                }
+            ]
+        }
+    ]
+}

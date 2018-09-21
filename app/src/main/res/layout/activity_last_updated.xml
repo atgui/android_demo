@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <include android:id="@id/toolbar_layout" layout="@layout/layout_toolbar"></include>
+
+    <!--TAG-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        android:paddingTop="@dimen/_10"
+        android:paddingLeft="@dimen/_10"
+        >
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/flowLayout"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            app:flChildSpacing="15dp"
+            app:flChildSpacingForLastRow="align"
+            app:flFlow="true"
+            app:flRowSpacing="6dp">
+
+        </com.nex3z.flowlayout.FlowLayout>
+
+    </LinearLayout>
+    <!--TabLayout-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        android:background="@color/color_black"
+        app:tabSelectedTextColor="@color/title_color"
+        app:tabTextColor="@color/item_txt_color"
+        app:tabIndicatorColor="@color/title_color"
+        >
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

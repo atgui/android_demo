@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="470dp"
+    android:background="@drawable/app_update_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="160dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/_20"
+        android:paddingRight="@dimen/_20"
+        android:paddingTop="@dimen/_40dp"
+        >
+        <TextView
+            android:id="@+id/txtVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0"
+            android:textColor="@color/color_white"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:background="@drawable/type_tag_look"
+            android:paddingRight="@dimen/_10"
+            android:paddingLeft="@dimen/_10"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="@dimen/_20"
+            />
+
+        <TextView
+            android:id="@+id/txtRemark"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center_vertical"
+            android:textColor="#666666"
+            android:lineSpacingExtra="@dimen/_5"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_10"
+            android:paddingRight="@dimen/_10"
+            >
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:textColor="@color/color_white"
+                android:text="立即安装"
+                android:textSize="18dp"
+                android:background="@drawable/button_install"
+                />
+            <RelativeLayout
+                android:id="@+id/proRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+                <ProgressBar
+                    android:id="@+id/pro_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/layer_pd"
+                    android:max="100"
+                    android:progress="0"
+                    />
+                <TextView
+                    android:id="@+id/txtPro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="已下载0%"
+                    android:textColor="#595659"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:textColor="@color/color_white"
+                android:text="立即更新"
+                android:textSize="18dp"
+                android:background="@drawable/button_normal_update"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

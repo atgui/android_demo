@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/_5"
+    >
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+        <com.xcore.ext.ImageViewExt
+            android:id="@+id/conver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/network_load"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/proTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20"
+                android:text="0%"
+                android:textColor="@color/color_white"
+                android:gravity="center_horizontal|bottom"
+                android:background="@drawable/down_up_grent_bg"
+                android:textSize="11dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="速度与激情8"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+
+</RelativeLayout>

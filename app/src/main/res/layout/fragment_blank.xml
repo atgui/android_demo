@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/color_black"
+       >
+       <LinearLayout
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:gravity="center_vertical"
+           android:background="@color/black_1A"
+           >
+           <TextView
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="类型"
+               android:textSize="@dimen/_20"
+               android:gravity="center_horizontal"
+               android:textColor="@color/title_color"
+               />
+           <ImageView
+               android:id="@+id/edit_search"
+               android:layout_width="@dimen/_20"
+               android:layout_height="@dimen/_20"
+               android:src="@drawable/search_bg"
+               android:layout_marginRight="10dp"
+               android:transitionName="search_transition"
+               />
+
+       </LinearLayout>
+
+       <com.nex3z.flowlayout.FlowLayout
+           android:layout_below="@id/toolbar"
+           android:id="@+id/one_flowLayout"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:gravity="center_vertical"
+           app:flChildSpacing="15dp"
+           app:flChildSpacingForLastRow="align"
+           app:flFlow="true"
+           app:flRowSpacing="6dp">
+
+       </com.nex3z.flowlayout.FlowLayout>
+
+       <com.nex3z.flowlayout.FlowLayout
+           android:layout_below="@id/one_flowLayout"
+           android:id="@+id/two_flowLayout"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:gravity="center_vertical"
+           app:flChildSpacing="15dp"
+           app:flChildSpacingForLastRow="align"
+           app:flFlow="true"
+           app:flRowSpacing="6dp">
+
+       </com.nex3z.flowlayout.FlowLayout>
+
+       <android.support.design.widget.TabLayout
+           android:layout_below="@id/two_flowLayout"
+           android:id="@+id/tab_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:tabMode="scrollable"
+           app:tabGravity="center"
+           android:background="@color/color_black"
+           app:tabSelectedTextColor="@color/title_color"
+           app:tabTextColor="@color/item_txt_color"
+           app:tabIndicatorColor="@color/title_color">
+
+
+       </android.support.design.widget.TabLayout>
+       <ImageView
+           android:id="@+id/x_Image"
+           android:layout_below="@id/tab_layout"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/item_txt_color"
+           />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_below="@id/x_Image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+   </RelativeLayout>
+
+</FrameLayout>

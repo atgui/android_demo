@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1A"
+    android:orientation="vertical"
+    >
+
+    <include android:id="@id/toolbar_layout" layout="@layout/layout_toolbar"></include>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_9c9c9c"
+        />
+    <com.nex3z.flowlayout.FlowLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:flChildSpacing="8dp"
+        app:flChildSpacingForLastRow="align"
+        app:flFlow="true"
+        app:flRowSpacing="6dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:background="@color/color_black"
+        android:paddingLeft="@dimen/_10"
+        >
+
+    </com.nex3z.flowlayout.FlowLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

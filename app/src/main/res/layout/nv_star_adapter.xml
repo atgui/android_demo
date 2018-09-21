@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/black_1A">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <cn.carbs.android.avatarimageview.library.AvatarImageView
+            android:id="@+id/item_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            app:aiv_BoarderWidth="2dp"
+            app:aiv_ShowBoarder="false"
+            app:aiv_TextSizeRatio="0.4"
+            >
+        </cn.carbs.android.avatarimageview.library.AvatarImageView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/color_9c9c9c"
+            android:gravity="center_horizontal"
+            android:textSize="11dp"
+            />
+    </LinearLayout>
+</LinearLayout>

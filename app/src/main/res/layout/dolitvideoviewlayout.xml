@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/app_video_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+    <android.media.ViviTV.player.widget.DolitVideoView
+         android:id="@+id/video_view"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_gravity="center"/>
+</RelativeLayout>

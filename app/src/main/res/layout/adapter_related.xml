@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/_10"
+    android:paddingRight="@dimen/_10"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    >
+
+    <com.xcore.ext.ImageViewExt
+        android:id="@+id/image_icon"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:src="@drawable/network_load"
+        />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        >
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35"
+            android:text=""
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color_white"
+            android:gravity="center_vertical"
+            />
+        <com.nex3z.flowlayout.FlowLayout
+            android:layout_weight="1"
+            android:id="@+id/flowLayout"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_gravity="left"
+            app:flChildSpacing="@dimen/_5"
+            app:flChildSpacingForLastRow="align"
+            app:flRowSpacing="6dp">
+
+
+        </com.nex3z.flowlayout.FlowLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/txt_playCount"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0次播放"
+                android:textColor="@color/color_9c9c9c"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_9c9c9c"
+                android:textSize="12dp"
+                android:gravity="right"
+                android:paddingRight="@dimen/_5"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

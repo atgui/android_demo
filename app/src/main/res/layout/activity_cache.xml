@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black_1A"
+    >
+
+    <include android:id="@id/toolbar_layout" layout="@layout/layout_toolbar"></include>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        app:tabTextColor="@color/color_white"
+        app:tabSelectedTextColor="@color/title_color"
+        app:tabIndicatorColor="@color/title_color"
+        >
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/color_9c9c9c"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_disk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:gravity="center_vertical|center_horizontal"
+            />
+        <TextView
+            android:id="@+id/clear_speace"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="清理空间"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/text_blue"
+            android:textSize="12dp"
+            android:paddingRight="8dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

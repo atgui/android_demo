@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    >
+
+    <!--<include android:id="@+id/toolbar_layout" layout="@layout/layout_toolbar"></include>-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20"
+        >
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!--封面-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+                    <!--<EditText-->
+                        <!--android:id="@+id/f_edit"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/_10"-->
+                        <!--android:text="vv"-->
+                        <!--/>-->
+                    <ImageView
+                        android:id="@+id/conver"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/network_load"
+                        android:scaleType="centerCrop"
+                        />
+                    <LinearLayout
+                        android:id="@+id/title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:text=""
+                            android:textColor="@color/title_color"
+                            android:textSize="@dimen/_30"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal|bottom"
+                            android:paddingBottom="@dimen/_15"
+                            android:background="@drawable/down_up_grent_bg"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="bottom"
+                        android:paddingLeft="@dimen/_5"
+                        >
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="性感少女"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/_20"
+                            android:textStyle="bold"
+                            android:gravity="left|bottom"
+                            />
+                        <TextView
+                            android:id="@+id/txtSw"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text=""
+                            android:textSize="13dp"
+                            android:textColor="@color/color_9c9c9c"
+                            android:gravity="top|left"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5"
+                        android:layout_marginTop="@dimen/_15"
+                        >
+
+                        <ImageView
+                            android:id="@+id/btn_back"
+                            android:layout_width="@dimen/_30"
+                            android:layout_height="@dimen/_30"
+                            android:src="@drawable/back_left_white"
+                            android:background="@drawable/button_radius_20"
+                            android:paddingLeft="@dimen/_5"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="@dimen/_5"
+                            android:paddingTop="@dimen/_5"
+                            android:layout_marginLeft="@dimen/_5"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!--标签-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:paddingLeft="@dimen/_10"
+                    android:paddingRight="@dimen/_10"
+                    >
+
+                    <com.nex3z.flowlayout.FlowLayout
+                        android:id="@+id/tagFlowLayout"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="bottom"
+                        app:flChildSpacing="10dp"
+                        android:paddingBottom="@dimen/_5"
+                        app:flChildSpacingForLastRow="align"
+                        app:flFlow="true"
+                        app:flRowSpacing="6dp">
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="sfdsafds"-->
+                            <!--android:textColor="@color/title_color"-->
+                            <!--/>-->
+
+                    </com.nex3z.flowlayout.FlowLayout>
+                </LinearLayout>
+                <!--内容-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_black"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/content_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        >
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

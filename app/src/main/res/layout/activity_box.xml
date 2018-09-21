@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/box_bg"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|bottom"
+        android:fitsSystemWindows="true"
+        >
+        <ImageView
+            android:id="@+id/animal_box"
+            android:layout_width="160dp"
+            android:layout_height="140dp"
+            android:background="@drawable/box_animation"
+            android:layout_marginBottom="45dp"
+            />
+    </LinearLayout>
+    <include android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10"
+        ></include>
+
+    <LinearLayout
+        android:layout_below="@id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="玩法介绍:"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1、宝箱每1小时可开启一次\n2、近期推广的好友越多,宝箱有机率开出次数越多"
+            android:lineSpacingExtra="@dimen/_10"
+            android:layout_marginTop="@dimen/_10"
+            android:textSize="16dp"
+            />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/btn_open"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:text="距离开宝箱还有00:00:00"
+                android:background="@drawable/receive_btn_no"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingLeft="70dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

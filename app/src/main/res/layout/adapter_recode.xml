@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5"
+    android:background="@color/black_1A"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/radioBtn"
+            android:layout_width="@dimen/_30"
+            android:layout_height="@dimen/_30"
+            android:background="@drawable/radio_btn"
+            android:layout_marginRight="@dimen/_5"
+            android:button="@null"
+            />
+
+        <com.xcore.ext.ImageViewExt
+            android:id="@+id/conver"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:src="@drawable/network_load"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_5"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/_5"
+                />
+            <com.nex3z.flowlayout.FlowLayout
+                android:id="@+id/bqFlowLayout"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                app:flChildSpacing="15dp"
+                app:flChildSpacingForLastRow="align"
+                app:flFlow="true"
+                app:flRowSpacing="6dp">
+
+            </com.nex3z.flowlayout.FlowLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

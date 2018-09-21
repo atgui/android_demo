@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="@dimen/_5"
+    android:layout_marginTop="@dimen/_5"
+    >
+
+    <TextView
+        android:id="@+id/txt_item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全部类型"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/item_txt_color"
+        android:gravity="center_horizontal"
+        android:background="@drawable/tag_default"
+        />
+</LinearLayout>

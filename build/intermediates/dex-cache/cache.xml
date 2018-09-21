@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="F:\githubPro\p2p\ijkplayer-java\build\intermediates\intermediate-jars\debug\classes.jar"
+        jumboMode="true"
+        min-sdk-version="18"
+        optimize="true"
+        revision="27.0.3"
+        sha1="fa6d6954b7faa816d0963acc8f69b3313701188c">
+        <dex dex="F:\githubPro\p2p\app\build\intermediates\transforms\preDex\debug\49\classes.dex" />
+    </item>
+
+</items>

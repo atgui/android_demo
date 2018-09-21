@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#FFFFFF</color>-->
+    <!--<color name="colorPrimaryDark">#549cf8</color>-->
+    <!--<color name="colorAccent">#EF5362</color>-->
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="color_gray">#9a9a9a</color>
+    <color name="text_blue">#0000FF</color>
+    <color name="color_gray_translucent">#5000</color>
+
+    <color name="app_color_theme_1">#EF5362</color> <!-- Grapefruit -->
+    <color name="app_color_theme_2">#FE6D4B</color> <!-- Bittersweet -->
+    <color name="app_color_theme_3">#FFCF47</color> <!-- Sunflower -->
+    <color name="app_color_theme_4">#9FD661</color> <!-- Grass -->
+    <color name="app_color_theme_5">#3FD0AD</color> <!-- Mint -->
+    <color name="app_color_theme_6">#2BBDF3</color> <!-- Aqua -->
+    <color name="app_color_theme_7">#00b0ff</color> <!-- Blue Jeans -->
+    <color name="app_color_theme_8">#AC8FEF</color> <!-- Lavender -->
+    <color name="app_color_theme_9">#EE85C1</color> <!-- Pink Rose -->
+
+    <color name="color_pink">#ff4081</color>
+    <color name="color_orange">#dd2c00</color>
+    <color name="color_blue_dark">#ee447AA4</color>
+
+    <!-- title 半透明背景颜色 -->
+    <color name="color_title_bg">#CCFFFFFF</color>
+    <!-- 默认背景色 -->
+    <color name="backgroundColor">#EEEEEE</color>
+
+    <!-- white -->
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+
+    <color name="color_blue">#87CEEB</color>
+
+    <!-- item 标题颜色 -->
+    <color name="color_item_title">#000000</color>
+
+    <color name="color_lighter_gray">#ddd</color>
+    <color name="color_darker_gray">#aaa</color>
+
+    <color name="color_division_line">@color/color_lighter_gray</color>
+
+    <color name="color_translucent">#00000000</color>
+
+    <color name="color_aquamarine">#7FFFD4</color>
+
+    <color name="color_light_black">#5000</color>
+
+    <color name="white">#ffffffff</color>
+
+    <color name="cache_edit_color">#4990f7</color>
+
+    <color name="item_txt_color">#5E5B57</color>
+    <color name="black_1A">#1A1A1A</color>
+    <color name="me_bg_color">#F2F2F2</color>
+    <color name="me_item_color">#7A7A7A</color>
+    <color name="me_look_color">#F96060</color>
+    <color name="me_cache_color">#00AF0C</color>
+    <color name="me_item_desc_color">#B9B9B9</color>
+    <color name="title_color">#e3b263</color>
+    <color name="red_color">#FF0000</color>
+    <color name="black_11100F">#11100F</color>
+    <color name="color_1f1711">#1f1711</color>
+    <color name="color_342D1D">#342D1D</color>
+    <color name="color_ff9600">#ff9600</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_9c9c9c">#9c9c9c</color>
+    <color name="color_a4a4a4">#A4A4A4</color>
+    <color name="color_0f0f0f">#0F0F0F</color>
+    <color name="color_green">#01C10A</color>
+    <color name="color_ff3158">#ff3158</color>
+    <color name="color_4eb034">#4eb034</color>
+    <color name="color_1296db">#1296db</color>
+
+    <!--手势密码-->
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="red_f4333c">#F4333C</color>
+
+    <color name="color_transf">#80000000</color>
+
+</resources>

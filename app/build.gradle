@@ -1,0 +1,452 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    dexOptions {
+        jumboMode = true
+    }
+    // 默认debug签名
+    signingConfigs {
+        release {
+            keyAlias 'voideo'
+            keyPassword 'steven'
+            storeFile file('jks/xcore.jks')
+            storePassword 'steven'
+        }
+        debug {
+            keyAlias 'voideo'
+            keyPassword 'steven'
+            storeFile file('jks/xcore.jks')
+            storePassword 'steven'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+    defaultConfig {
+        applicationId "com.xcore"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        //15  1.1.2
+        versionCode 17
+        versionName "1.1.7"
+
+        ndk {
+            moduleName "DLBT"
+        }
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url 'https://dl.bintray.com/wangyuwei/maven'
+    }
+}
+dependencies {
+    //implementation(name: 'BASE64', ext: 'jar')
+//    implementation(name: 'zxing',ext: 'jar')
+    implementation(name: 'jjdxm-ijkplayer', ext: 'aar')
+//    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //implementation 'com.yanzhenjie:permission:2.0.0-rc5'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation "com.android.support:recyclerview-v7:27.1.1"
+    //布局
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    //流式布局 tag 自动换行
+    implementation "com.nex3z:flow-layout:1.2.2"
+
+    //app 重新启动
+//    implementation "com.zxy.android:recovery:0.1.6"
+
+    //okgo
+    implementation "com.lzy.net:okgo:3.0.4"
+//    implementation "com.lzy.net:okrx2:2.0.2"
+//    implementation "io.reactivex.rxjava2:rxjava:2.1.0"
+//    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+
+    //json<->对像转换
+    implementation "com.google.code.gson:gson:2.8.5"
+
+    //loading
+    implementation "com.wang.avi:library:2.1.3"
+
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //自定义加载图片超时连接设置  可以不用了
+//    implementation "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar"
+
+    //图片轮播
+//    implementation "com.youth.banner:banner:1.4.10"
+    implementation "com.github.pinguo-zhouwei:MZBannerView:v2.0.2"
+
+    //底部弹窗
+    implementation "me.shaohui:bottomdialog:1.1.9"
+
+    //生成二维码
+//    implementation "com.google.zxing:core:3.3.0"
+//    implementation "com.github.SumiMakito:AwesomeQRCode:1.0.0"
+
+    //聊天界面生成
+//    implementation "com.github.bassaer:chatmessageview:1.11.1"
+
+    //底部frament  V ScrollerView 滚动
+    implementation "com.lzy.widget:view-core:0.1.5"
+    //为控件添加阴影的库
+    implementation "com.android.support:cardview-v7:26.0.0"
+
+    //格式化json 库
+//    implementation files('libs/fastjson-1.2.7.jar')
+
+    //点赞
+    implementation "com.wx.goodview:goodview:1.0.0"
+
+    //网络加载
+    implementation "com.github.gittjy:LoadingDialog:1.0.2"
+
+    //带阴影的图片 可以圆形
+    //圆形图片
+    implementation "cn.carbs.android:AvatarImageView:1.0.4"
+
+    //手势密码
+    implementation project(':lockpattern')
+
+    //新手引导
+//    implementation project(':Spotlight-library')
+//    implementation "com.github.takusemba:spotlight:1.5.0"
+//    implementation "com.github.wooplr:Spotlight:1.2.3"
+
+    //app 更新升级  这个库只用到了安装apk
+//    implementation project(':library_update')
+    implementation "com.github.maning0303:MNUpdateAPK:V1.1.8"
+
+    //进度条
+//    implementation 'com.white:progressview:1.0.1'
+
+    //权限获取
+//    implementation 'com.lovedise:permissiongen:0.0.6'
+
+    //刷新
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7"
+    //如果要设置一特殊的刷新头可以加载这个lib
+//    implementation "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7"
+
+    //加密播放器
+    implementation project(':ijkplayer-java')
+
+    //热更
+    implementation("com.tencent.tinker:tinker-android-lib:1.9.6") { changing = true }
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    annotationProcessor("com.tencent.tinker:tinker-android-anno:1.9.6") {
+        changing = true
+    }
+    compileOnly("com.tencent.tinker:tinker-android-anno:1.9.6") { changing = true }
+
+    implementation 'com.android.support:multidex:1.0.3'
+}
+
+def bakPath = file("${buildDir}/bakApk/")
+
+/**
+ * you can use assembleRelease to build you base apk
+ * use tinkerPatchRelease -POLD_APK=  -PAPPLY_MAPPING=  -PAPPLY_RESOURCE= to build patch
+ * add apk from the build/bakApk
+ */
+def rPath = "app-release-0916-23-56-44"//-0808-02-23-41
+ext {
+    //for some reason, you may want to ignore tinkerBuild, such as instant run debug build?
+    tinkerEnabled = false
+
+    //for normal build
+    //old apk file to build patch apk
+    tinkerOldApkPath = "${bakPath}/${rPath}.apk"
+    //proguard mapping file to build patch apk
+    tinkerApplyMappingPath = "${bakPath}/${rPath}-mapping.txt"
+    //resource R.txt to build patch apk, must input if there is resource changed
+    tinkerApplyResourcePath = "${bakPath}/${rPath}-R.txt"
+
+    //only use for build all flavor, if not, just ignore this field
+//    tinkerBuildFlavorDirectory = "${bakPath}/"
+}
+
+
+def getOldApkPath() {
+    return hasProperty("OLD_APK") ? OLD_APK : ext.tinkerOldApkPath
+}
+
+def getApplyMappingPath() {
+    return hasProperty("APPLY_MAPPING") ? APPLY_MAPPING : ext.tinkerApplyMappingPath
+}
+
+def getApplyResourceMappingPath() {
+    return hasProperty("APPLY_RESOURCE") ? APPLY_RESOURCE : ext.tinkerApplyResourcePath
+}
+
+def getTinkerIdValue() {
+    return hasProperty("TINKER_ID") ? TINKER_ID : "com.xcode_1_0"//gitSha()
+}
+
+def buildWithTinker() {
+    return hasProperty("TINKER_ENABLE") ? Boolean.parseBoolean(TINKER_ENABLE) : ext.tinkerEnabled
+}
+
+//def getTinkerBuildFlavorDirectory() {
+//    return ext.tinkerBuildFlavorDirectory
+//}
+
+if (buildWithTinker()) {
+    apply plugin: 'com.tencent.tinker.patch'
+
+    tinkerPatch {
+        /**
+         * necessary，default 'null'
+         * the old apk path, use to diff with the new apk to build
+         * add apk from the build/bakApk
+         */
+        oldApk = getOldApkPath()
+        /**
+         * optional，default 'false'
+         * there are some cases we may get some warnings
+         * if ignoreWarning is true, we would just assert the patch process
+         * case 1: minSdkVersion is below 14, but you are using dexMode with raw.
+         *         it must be crash when load.
+         * case 2: newly added Android Component in AndroidManifest.xml,
+         *         it must be crash when load.
+         * case 3: loader classes in dex.loader{} are not keep in the main dex,
+         *         it must be let tinker not work.
+         * case 4: loader classes in dex.loader{} changes,
+         *         loader classes is ues to load patch dex. it is useless to change them.
+         *         it won't crash, but these changes can't effect. you may ignore it
+         * case 5: resources.arsc has changed, but we don't use applyResourceMapping to build
+         */
+        ignoreWarning = false
+
+        /**
+         * optional，default 'true'
+         * whether sign the patch file
+         * if not, you must do yourself. otherwise it can't check success during the patch loading
+         * we will use the sign config with your build type
+         */
+        useSign = true
+
+        /**
+         * optional，default 'true'
+         * whether use tinker to build
+         */
+        tinkerEnable = buildWithTinker()
+
+        /**
+         * Warning, applyMapping will affect the normal android build!
+         */
+        buildConfig {
+            /**
+             * optional，default 'null'
+             * if we use tinkerPatch to build the patch apk, you'd better to apply the old
+             * apk mapping file if minifyEnabled is enable!
+             * Warning:
+             * you must be careful that it will affect the normal assemble build!
+             */
+            applyMapping = getApplyMappingPath()
+            /**
+             * optional，default 'null'
+             * It is nice to keep the resource id from R.txt file to reduce java changes
+             */
+            applyResourceMapping = getApplyResourceMappingPath()
+
+            /**
+             * necessary，default 'null'
+             * because we don't want to check the base apk with md5 in the runtime(it is slow)
+             * tinkerId is use to identify the unique base apk when the patch is tried to apply.
+             * we can use git rev, svn rev or simply versionCode.
+             * we will gen the tinkerId in your manifest automatic
+             */
+            tinkerId = getTinkerIdValue()
+
+            /**
+             * if keepDexApply is true, class in which dex refer to the old apk.
+             * open this can reduce the dex diff file size.
+             */
+            keepDexApply = false
+
+            /**
+             * optional, default 'false'
+             * Whether tinker should treat the base apk as the one being protected by app
+             * protection tools.
+             * If this attribute is true, the generated patch package will contain a
+             * dex including all changed classes instead of any dexdiff patch-info files.
+             */
+            isProtectedApp = false
+
+            /**
+             * optional, default 'false'
+             * Whether tinker should support component hotplug (add new component dynamically).
+             * If this attribute is true, the component added in new apk will be available after
+             * patch is successfully loaded. Otherwise an error would be announced when generating patch
+             * on compile-time.
+             *
+             * <b>Notice that currently this feature is incubating and only support NON-EXPORTED Activity</b>
+             */
+            supportHotplugComponent = false
+        }
+
+        dex {
+            /**
+             * optional，default 'jar'
+             * only can be 'raw' or 'jar'. for raw, we would keep its original format
+             * for jar, we would repack dexes with zip format.
+             * if you want to support below 14, you must use jar
+             * or you want to save rom or check quicker, you can use raw mode also
+             */
+            dexMode = "jar"
+
+            /**
+             * necessary，default '[]'
+             * what dexes in apk are expected to deal with tinkerPatch
+             * it support * or ? pattern.
+             */
+            pattern = ["classes*.dex",
+                       "assets/secondary-dex-?.jar"]
+            /**
+             * necessary，default '[]'
+             * Warning, it is very very important, loader classes can't change with patch.
+             * thus, they will be removed from patch dexes.
+             * you must put the following class into main dex.
+             * Simply, you should add your own application {@code tinker.sample.android.SampleApplication}
+             * own tinkerLoader, and the classes you use in them
+             *
+             */
+            loader = [
+                    //use sample, let BaseBuildInfo unchangeable with tinker
+                    "com.xcore.MainApplication"
+            ]
+        }
+
+        lib {
+            /**
+             * optional，default '[]'
+             * what library in apk are expected to deal with tinkerPatch
+             * it support * or ? pattern.
+             * for library in assets, we would just recover them in the patch directory
+             * you can get them in TinkerLoadResult with Tinker
+             */
+            pattern = ["libs/*/*.so"]
+        }
+
+        res {
+            /**
+             * optional，default '[]'
+             * what resource in apk are expected to deal with tinkerPatch
+             * it support * or ? pattern.
+             * you must include all your resources in apk here,
+             * otherwise, they won't repack in the new apk resources.
+             */
+            pattern = ["res/*", "assets/*", "resources.arsc", "AndroidManifest.xml"]
+
+            /**
+             * optional，default '[]'
+             * the resource file exclude patterns, ignore add, delete or modify resource change
+             * it support * or ? pattern.
+             * Warning, we can only use for files no relative with resources.arsc
+             */
+            ignoreChange = ["assets/sample_meta.txt"]
+
+            /**
+             * default 100kb
+             * for modify resource, if it is larger than 'largeModSize'
+             * we would like to use bsdiff algorithm to reduce patch file size
+             */
+            largeModSize = 100
+        }
+
+        packageConfig {
+            /**
+             * optional，default 'TINKER_ID, TINKER_ID_VALUE' 'NEW_TINKER_ID, NEW_TINKER_ID_VALUE'
+             * package meta file gen. path is assets/package_meta.txt in patch file
+             * you can use securityCheck.getPackageProperties() in your ownPackageCheck method
+             * or TinkerLoadResult.getPackageConfigByName
+             * we will get the TINKER_ID from the old apk manifest for you automatic,
+             * other config files (such as patchMessage below)is not necessary
+             */
+            configField("patchMessage", "tinker is sample to use")
+            /**
+             * just a sample case, you can use such as sdkVersion, brand, channel...
+             * you can parse it in the SamplePatchListener.
+             * Then you can use patch conditional!
+             */
+            configField("platform", "all")
+            /**
+             * patch version via packageConfig
+             */
+            configField("patchVersion", "1.0")
+        }
+    }
+
+    List<String> flavors = new ArrayList<>();
+    project.android.productFlavors.each { flavor ->
+        flavors.add(flavor.name)
+    }
+    boolean hasFlavors = flavors.size() > 0
+    def date = new Date().format("MMdd-HH-mm-ss")
+
+    /**
+     * bak apk and mapping
+     */
+    android.applicationVariants.all { variant ->
+        /**
+         * task type, you want to bak
+         */
+        def taskName = variant.name
+
+        tasks.all {
+            if ("assemble${taskName.capitalize()}".equalsIgnoreCase(it.name)) {
+
+                it.doLast {
+                    copy {
+                        def fileNamePrefix = "${project.name}-${variant.baseName}"
+                        def newFileNamePrefix = hasFlavors ? "${fileNamePrefix}" : "${fileNamePrefix}-${date}"
+
+                        def destPath = hasFlavors ? file("${bakPath}/${project.name}-${date}/${variant.flavorName}") : bakPath
+                        from variant.outputs.first().outputFile
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("${fileNamePrefix}.apk", "${newFileNamePrefix}.apk")
+                        }
+
+                        from "${buildDir}/outputs/mapping/${variant.dirName}/mapping.txt"
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("mapping.txt", "${newFileNamePrefix}-mapping.txt")
+                        }
+
+                        from "${buildDir}/intermediates/symbols/${variant.dirName}/R.txt"
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("R.txt", "${newFileNamePrefix}-R.txt")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
